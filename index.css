@@ -1,0 +1,694 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --green:#63D349;
+    --white:#FFFFFF;
+    --black:#091320;
+    --orange:#FF7A00;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body  {  
+    font-family: 'Oswald', arial, sans-serif;    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+
+nav{
+    /* background-color:pink; */
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    background-color: #fff ;
+    z-index: 9999;
+}
+
+nav .content{
+    display: flex;
+    padding: 0px 2.5%;
+    gap: 60px;
+}
+
+.nav .content #logo h1{
+    font-size: 12px;
+    display: inline-block;
+}
+.nav .content #logo{
+    /* background-color: green; */
+    background-image: url('./utils/logo.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 150px 50px;
+    height: 100px;
+    line-height: 100px;
+    padding-left:160px ;
+}
+
+/* menu wrap */
+.menu-wrap{
+    flex-grow: 1;
+    /* background-color: blueviolet; */
+
+}
+.menu-wrap .menu{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between; 
+    align-items: center;
+    /* background-color:aqua; */
+    cursor: pointer;
+}
+
+.menu-wrap .menu .menu-link a{
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+}
+
+.menu-wrap .menu .menu-link a:hover{
+    border-bottom: 4px solid orange;
+    border-radius: 5px; ;
+}
+
+
+/* language */
+
+#lang{
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.menu li:nth-child(6) a,
+.menu li:nth-child(7) a {
+    display: block;
+    width: 107px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; /* hide any text if present, for accessibility you can keep title */
+}
+
+.menu li:nth-child(6) a {
+    
+    background-image: url('./utils/appstore.svg');
+}
+
+.menu li:nth-child(7) a { 
+    background-image: url('./utils/googleplay.svg'); /* assuming you’ll add this later */
+}
+
+
+/* section start */
+
+.start_sect{
+    /* background-color: red; */
+    width: 100%;
+    height: 920px;
+    /* WE DID MARGIN TOP BECAUSE NAVBAR IS FIXED POSITION SO IT IS OUT OF FLOW OF DOCUMENT */
+    margin-top: 100px;
+    position: relative;
+}
+
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.start_sect > h2 {
+    position: absolute;
+    /* we will specifiy the width and height because position absolute will make element to just fit content so we have to specify the width and the height  */
+    width: 90%;
+    /* background-color: blue; */
+    top: 0;
+    padding-top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--green);
+    text-align: center;
+    font-size: 45px;
+}
+.start_sect > h2 span{
+    display: block;
+    font-size: 66px;
+    /* background-color: pink; */
+    color: var(--white);
+    font-weight: 600;
+    margin-top: 20px;
+    /* line-height: 117%; */
+}
+
+.start_sect > h3{
+    /* background-color: #63D349; */
+    position: absolute;
+    width: 269px;
+    text-align: center;
+    top: 299px;
+    right: 50%;
+    transform: translateX(50%);
+    color: whitesmoke;
+    font-size: 22px;    
+}
+
+/* section of link in hero section */
+.sect-link{
+    /* background-color: red; */
+    position: absolute;
+    width: 491px;
+    height: 112px;
+    top: 407px;
+    right: 50%;
+    transform: translateX(50%);
+    background-image: url('./utils/bg1.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* inline-block element are treated as text so to center a link bellow we did this in parent */
+    text-align: center;
+}
+.sect-link a{
+    display: inline-block;
+    background-color: #fff;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    position: relative;
+    top: 56px;
+    transform: translateY(-50%);
+    background-image: url('./utils/arr-down.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 19px;    
+}
+
+#phones{
+    width: 51%;
+    height: 200px;
+    height: 623px;
+    /* background-color: red; */
+    position: absolute;
+    top: 632px;
+    right: 50%;
+    transform: translateX(50%);
+      
+}
+
+/* here we did another container for phones to do as position relative */
+.phones-container{
+    /* background-color: green; */
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+
+}
+.left{
+    position: absolute;
+    left: 0;
+    width: 235px;
+    height: 432px;
+    transform: translateZ(-100px);
+    z-index: 1;
+}
+
+
+
+.center{
+    width: 337px;
+    height: 623px;
+    position: absolute;
+    right: 50px;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.right{
+    width: 269px;
+    height: 497px;
+    position: absolute;
+    right: 46px;
+    z-index: 2;
+}
+
+
+#for_whom{
+    background-color: var(--black);
+    color: #fff;
+    /* height: 1000px; */
+    padding-top: 430px;
+    position: relative;
+    z-index: -1;
+    background-image: url('./utils/bg3.webp');
+    background-repeat: no-repeat;
+    background-size: 306px 253px;
+    background-position: calc(50% + 444px) 404px;
+    /* margin-bottom:50px ; */
+}
+
+.section_bg_2{
+    width: 112px;
+    height: 42px;
+    /* background-color: orange; */
+    background-image: url('./utils/bg2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+}
+
+#for_whom > h3{
+    margin: auto;
+    /* background-color: red; */
+    width: 100%;
+    max-width: 480px;
+    color: var(--green);
+    text-align: center;
+    font-size: 60px;
+}
+
+
+.people_app_for{
+    width: 1204px;
+    /* margin:auto; */
+    padding: 122px 30px;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    margin:auto;
+}
+.people{
+    /* background-color: greenyellow; */
+    width: 242px;
+    text-align: center;
+}
+
+.people h4{
+    font-size: 35px;
+}
+.people p{
+    margin-bottom: 20px;
+}
+.people hr{
+    width: 111px;
+    height: 2px;
+    margin: 50px auto;
+    background-color: var(--green);
+    border: 0px none;
+    border-radius: 20px;
+}
+
+
+.center_bar{
+    width: 350px;
+    height: 9px;
+    border: 0px none;
+    border-radius: 15px;
+    background-color: var(--green);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+
+
+/* Start functionalities styling */
+.functionalities{
+    width: 100%;
+    /* height: 1000px; */
+    color: white;
+    padding-top: 96px;
+    background-image: url('./utils/bg4.webp');
+    background-repeat:no-repeat;
+    background-position: center 36px;
+    background-size: 50%;
+    background-color: var(--black);
+    /* background-color: pink; */
+    position: relative;
+    
+
+}
+
+.functionalities .dotted-background{
+    width: 236px;
+    height: 62px;
+    /* background-color: orange; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(377px);
+    top: 238px;
+    background-image: url('./utils/bg5.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.functionalities .app-links-wrap {
+    /* background-color: aqua; */
+    width:450px;
+    height: 59px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.functionalities .app-links-wrap a{
+    display: inline-block;
+    width: 203px;
+    height: 100%;
+    line-height: 59px;
+    color: white;
+    /* background-color: orange; */
+}
+
+.functionalities .app-links-wrap .appStore{
+    background-image: url('./utils/appstore.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.functionalities .app-links-wrap .playStore{
+    background-image: url('./utils/googleplay.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+/* starting part of fame and skills */
+.fame-skill h3{
+    color: #FFF;
+    font-size: 150px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 119.7%;
+    text-transform: uppercase;
+    margin-top: 195px;       
+}
+
+.fame-skill-wrapper{
+    margin-top: 52px;
+    /* background-color: red; */
+    width: 100%;
+    margin:41px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: black;
+    /* background-color: greenyellow; */
+    padding: 65px 0px;
+}
+
+.fs-background{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 932px;
+    height: 131px;
+    background-color: #ddd;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.fame-skill-wrapper div:nth-child(2),.fame-skill-wrapper div:nth-child(3){    
+    width: 570px;
+    height: 108px;
+    border-radius: 50px;
+    /* line-height:108px; */
+    z-index: 2;
+    position: relative;
+}
+
+.fame-skill-wrapper .fame-item-left{
+    background-color: var(--orange);
+    background-image: url('./utils/fame-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 30px center;
+    text-align: right;
+    /* padding-right: 120px; */
+    
+    
+}
+
+
+
+
+.fame-skill-wrapper .skill-item-right{
+    background-color: var(--green);
+    background-image: url('./utils/skill-icon.svg');
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+    text-align: left;
+    padding-left: 120px;
+}
+
+.fame-skill-wrapper .fame-item-left p{
+    /* background-color: red; */
+    display: inline-block;
+    position: absolute;
+    font-weight: 600;
+    top: 50%;
+    right: 120px;
+    transform: translateY(-50%);
+    font-size: 17px;
+}
+
+.fame-skill-wrapper .fame-item-left p span{
+    display: block;
+    /* background-color: yellow; */
+    margin-top:10px ;
+    font-size: 24px;
+}
+
+.fame-skill-wrapper .skill-item-right p{
+    /* background-color: red; */
+    display: inline-block;
+    position: absolute;
+    font-weight: 600;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+    font-size: 17px;
+}
+
+
+.fame-skill-wrapper .skill-item-right p span{
+    display: block;
+    /* background-color: yellow; */
+    margin-top: 10px;
+    font-size: 24px;
+}
+.avatar{
+    background-color: #ddd ;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    padding: 10px;
+    background-image: url('./utils/avatar.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border: 14px solid #fff;
+    /* border-radius: 144px; */
+}
+
+
+
+.fs-box{
+    /* background-color: rgb(40, 223, 236); */
+    width: 60%;
+    height: 38px;
+    margin: 20px auto 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 130px;
+    align-items: end;
+}   
+
+
+/* give this div relative position until to be able to move arrows */
+.fs-box > div{
+    width: 100%;
+    height: 13px;
+    background-color: #3B4654;
+    border-radius: 30px;
+    position: relative;
+}
+
+.fame_no{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--green);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 100%;
+    width: 50%;
+}
+
+.skill_no{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--orange);
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    height: 100%;
+    width: 70%;
+}
+
+
+.fs-box .arrow-left,.fs-box .arrow-right{
+    /* background-color: red; */
+    width: 64px;
+    position: relative;
+    bottom: 33px;
+    color: black;
+}
+
+.fs-box .arrow-left{
+    left: 137px;
+}
+
+
+
+.fs-box .arrow-left p , .fs-box .arrow-right p {
+    /* background-color: blue; */
+    background-color: #ddd;
+    border-radius: 60px;
+    padding: 5px;
+}
+
+.fs-box .arrow-left p::before, .fs-box .arrow-right p::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #ddd;
+    bottom: -5px;
+
+    left: 50%;
+    transform: rotateZ(45deg) translateX(-50%);
+}
+
+
+.fs-box .arrow-right{   
+    /* background-color: red; */
+    left: 204px;
+}
+
+
+/* end the part of fame and skills */
+
+#fs_desc{
+    /* background-color: red; */
+    width: 640px;
+    height: 120px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#funk_wrap{
+    background-color: orange;
+    position: relative;
+    padding-top: 96px;
+    height: 1000px;
+    background-image:url('./utils/bg6.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 760px 741px;
+}
+
+.bg_phone{
+    background-color: #fff;
+    width: 310px;
+    height: 636px;
+    position: absolute;
+    left: 50%;
+    margin-left:-7px ;
+    transform: translateX(-50%);
+    border-radius: 40px;
+}
+
+#phone_structure{
+    width: 382px;
+    height: 694px;
+    margin: auto;
+    position: absolute;
+    top: 85px;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    /* opacity: 0.2; */
+}
+
+.screen{
+    width: 288px;
+    height: 640px;
+    
+    /* background-color: greenyellow; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -7px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.screen_1{
+    background-image: url('./utils/phone-func1.webp');
+}
+
+.screen_2{
+    display: none;
+    background-image: url('./utils/phone-func2.webp');
+}
+
+.screen_3{
+    display: none;
+    background-image: url('./utils/phone-func3.webp');
+}
+
+.screen_4{
+    display: none;
+    background-image: url('./utils/phone-func4.webp');
+}
+
+.bubble{
+    position: absolute;
+}
+
+/* end functionalities styles */
