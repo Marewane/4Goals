@@ -117,10 +117,6 @@ npx http-server
 - Mobile browsers (iOS Safari, Chrome Mobile)
 - Requires JavaScript enabled for full functionality
 
-## 🔗 App Store Links
-
-- **iOS**: [App Store Link](https://apps.apple.com/app/4goal/id1573148581)
-- **Android**: [Google Play Link](https://play.google.com/store/apps/details?id=app.goal4.mobile)
 
 ## 📈 Key Features Showcase
 
