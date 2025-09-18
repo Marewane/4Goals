@@ -19,7 +19,7 @@
                 <ul class="menu">
                     <li class="menu-link"> <a href="#for_whom"> FOR WHOM</a></li>
                     <li class="menu-link"> <a href="#functionalities"> FUNCTIONALITIES</a></li>
-                    <li class="menu-link"> <a href="#"> ABOUT THE APP</a></li>
+                    <li class="menu-link"> <a href="#about_the_app"> ABOUT THE APP</a></li>
                     <li class="menu-link"> <a href="#"> CONTACT</a></li>
                     <li class="lang-link">
                          <div class="lang-wrap">
@@ -54,7 +54,7 @@
             <span>FOR YOUNG FOOTBALL PLAYERS</span>
         </h2>
         <h3>join the team of winners and show your talent to the world!</h3>     
-        <div class="sect-link">
+        <div class="sect-link" id="sect_link1">
             <a href="#for_whom" aria-label="sect_link"></a>            
         </div>
         <div id="phones">
@@ -164,11 +164,37 @@
         </div>
         <div id="funk_wrap">
             <div class="bubble_left_top bubble">
-                
+                <div class="arrow_to_right arrow_to_img_container">
+                    <div class="bubble_nested">
+                        <h4>Your own football profile</h4>
+                        <div class="bubble_icon active"></div>
+                    </div>
+                </div>
             </div>
-            <div class="bubble_right_top bubble"></div>
-            <div class="bubble_bottom_left bubble"></div>
-            <div class="bubble_bottom_right bubble"></div>
+            <div class="bubble_right_top bubble">
+                <div class="arrow_to_left arrow_to_img_container">
+                    <div class="bubble_nested">
+                        <div class="bubble_icon"></div>
+                        <h4>create football challenges</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="bubble_bottom_left bubble">
+                <div class="arrow_to_right arrow_to_img_container">
+                    <div class="bubble_nested">
+                        <h4>Discover videos of other players</h4>
+                        <div class="bubble_icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bubble_bottom_right bubble">
+                <div class="arrow_to_left arrow_to_img_container">
+                    <div class="bubble_nested">
+                        <div class="bubble_icon"></div>
+                        <h4>Track player's activity</h4>
+                    </div>
+                </div>
+            </div>
             <!-- THIS IS THE STRUCTURE OF PHONE -->
             <div class="bg_phone"></div>
             <div class="screen_1 screen"></div>
@@ -176,9 +202,56 @@
             <div class="screen_3 screen"></div>
             <div class="screen_4 screen"></div>
             <img src="./utils/phone.webp" id="phone_structure" alt="Phone structure image">
+            <div class="points_wrap">
+                <div id="p1" class="point active"></div>
+                <div id="p2" class="point"></div>
+                <div id="p3" class="point"></div>
+                <div id="p4" class="point"></div>
+            </div>
+            <div class="sect_link" id="sect_link2">
+                <a href="#about_the_app"></a>
+            </div>
         </div>
+        
      </section>
      <!-- this si the end of functionalities -->
+
+     <section id="about_the_app">
+        <div id="steps_wrap">
+            <div id="step1" class="step">
+                <div class="step_icon"></div>
+                <p>Record a video of how you train, do a trick or want to say something.</p>
+                <div class="step_line"></div>
+            </div>
+            <div id="step2" class="step">
+                <div class="step_icon"></div>
+                <p>Upload the recording to the 4goal.app application on your profile.</p> 
+                <div class="step_line"></div>
+            </div>
+            <div id="step3" class="step">
+                <div class="step_icon"></div>
+                <p>Wait for reactions and connect with experts and other footballers.</p>
+                <div class="step_line"></div>
+            </div>
+            <div id="step4" class="step">
+                <div class="step_icon"></div>
+                <p>Build your career record and make your dream come true!</p>
+                <div class="step_line"></div>
+            </div>
+        </div>
+        <div class="talent_wrap">
+            <h4>SHOW YOUR</h4>
+            <img src="./utils/talent.svg" alt="talent Image" id="talent_img">
+            <img src="./utils/4goalico.svg" alt="4Goals Logo" id="talent_logo">
+            <div class="blur_background"></div>
+        </div>
+        
+     </section>
     
+
+
+
+
+     <script src="script.js"></script>
 </body>
 </html>

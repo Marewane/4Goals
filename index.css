@@ -8,6 +8,7 @@
     --white:#FFFFFF;
     --black:#091320;
     --orange:#FF7A00;
+    --grey:#C4D0E1;
 }
 
 html{
@@ -171,7 +172,7 @@ nav .content{
 }
 
 /* section of link in hero section */
-.sect-link{
+#sect_link1{
     /* background-color: red; */
     position: absolute;
     width: 491px;
@@ -340,7 +341,7 @@ nav .content{
 /* Start functionalities styling */
 .functionalities{
     width: 100%;
-    /* height: 1000px; */
+    height: auto;
     color: white;
     padding-top: 96px;
     background-image: url('./utils/bg4.webp');
@@ -348,7 +349,7 @@ nav .content{
     background-position: center 36px;
     background-size: 50%;
     background-color: var(--black);
-    /* background-color: pink; */
+    /* background-color: yellow; */
     position: relative;
     
 
@@ -624,11 +625,12 @@ nav .content{
     /* background-color: orange; */
     position: relative;
     padding-top: 96px;
+    height: auto;
     height: 1000px;
     background-image:url('./utils/bg6.svg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 760px 741px;
+    background-size: 760px 741px;  
 }
 
 .bg_phone{
@@ -689,6 +691,397 @@ nav .content{
 
 .bubble{
     position: absolute;
+    width: 375px;
+    height: 145px;
+    background: #fff;
+    border-radius: 30px;
+    margin: 33.766px;
+    color: black;
+    /* overflow: hidden; */
+}
+
+
+.arrow_to_img_container{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bubble_left_top::before,.bubble_bottom_left::after{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(45deg);
+    
+}
+
+
+.bubble_right_top::before,.bubble_bottom_right::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(45deg);
+}
+
+.bubble_left_top{
+    top: 269px;
+    left: 0;
+    padding-left: 20px;
+}
+
+.bubble_bottom_left{
+    top: 496px;
+    padding-left: 20px;
+    left: 0;
+}
+
+.bubble_right_top{
+    top: 269px;
+    right: 0; 
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.bubble_bottom_right{
+    top:496px;
+    right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.bubble_nested{
+    /* z-index: 2000; */
+    color: black;
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.bubble_nested .bubble_icon{
+    width: 100px;
+    height: 100px;   
+    /* background-color: #ddd; */
+    border: 5px solid var(--grey);
+    border-radius: 100px;
+
+}
+
+.bubble_nested .bubble_icon:hover{
+    border: 5px solid var(--green);
+    transition: border 0.2s ease-in-out;
+}
+
+.arrow_to_left{
+    /* background-color: orange; */
+    border-right: 1px solid #f3d6d6;
+    border-radius: 6px;
+    padding-left:20px ;
+    /* border-radius: 30px; */
+}
+
+.arrow_to_right{
+    /* background-color: pink; */
+    border-left: 1px solid #f3d6d6;
+    border-radius: 6px;
+    padding-left: 20px;
+    /* border-radius: 30px; */
+}
+
+.arrow_to_right .bubble_nested h4{
+    /* background-color: yellow; */
+    /* position: absolute; */
+    width: 145px;
+    height: 98px;
+    font-size: 23px;
+    /* background-color: greenyellow; */
+
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+}
+.arrow_to_left .bubble_nested h4{
+    /* background-color: red; */
+    /* position: absolute; */
+    width: 145px;
+    height: 98px;
+    font-size: 23px;
+    /* background-color: greenyellow; */
+    /* top: 50%;
+    right: 20px;
+    transform: translateY(-50%); */
+
+}
+
+
+/* insert icon in circles of bubbles */
+.bubble_left_top .bubble_icon{
+    background-image: url('./utils/bubble1.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+.bubble_right_top .bubble_icon{
+    background-image: url('./utils/bubble2.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+
+.bubble_bottom_left .bubble_icon{
+    background-image: url('./utils/bubble3.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+.bubble_bottom_right .bubble_icon{
+    background-image: url('./utils/bubble4.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+
+.bubble_icon.active{
+    /* background-color: red; */
+    /* margin-right: 20px; */
+    border:5px solid var(--green);
+}
+
+#sect_link2{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    bottom: 102px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+
+#sect_link2 a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url('./utils/arr-down.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 19px;  
+}
+/* end of inserting icons in circles of bubbles */
+
+.points_wrap{
+    width: 97px;
+    height: 26px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 196px;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.points_wrap .point{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--black);
+}
+
+.points_wrap .point.active{
+    background-color: #fff;
+}
+
+
+#for_whom,
+#functionalities,
+#about_the_app {
+    scroll-margin-top: 100px; /* Height of your fixed navbar */
 }
 
 /* end functionalities styles */
+
+
+
+
+/* start section of about the app */
+#about_the_app{
+    width: 100%;
+    height: 1000px;
+    background-color: var(--black);
+    color: white;
+    padding:0 33.766px ;
+    /* background-color: red; */
+}
+
+#about_the_app #steps_wrap{
+    width: 100%;
+    height: 246px;
+    display: flex;
+    justify-content: center;
+    /* background-color: orange; */
+}
+
+#about_the_app #steps_wrap .step{
+    width: 25%;
+    height: 100%;
+    /* background-color: yellow; */
+    /* border: 2px solid white; */
+    /* padding: 30px; */
+    text-align: center;
+    position: relative;
+}
+
+
+.step > *{
+    margin: auto;
+}
+
+
+
+.step .step_icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 92px;
+    background-color: var(--black); /* ← This hides the line */
+    border: 4px solid var(--grey);
+    position: relative; /* For z-index */
+    z-index: 2; /* Ensure it’s above the line */
+}
+
+#step1 .step_icon{
+    background-image: url('./utils/st1.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+#step2 .step_icon{
+    background-image: url('./utils/st2.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+#step3 .step_icon{
+    background-image: url('./utils/st3.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+#step4 .step_icon{
+    background-image: url('./utils/st4.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+
+.step p{
+    /* background-color: red; */
+    width: 230px;
+    text-align: center;
+    margin-top:40px ;
+}
+.step .step_line{
+    z-index: 1;
+}
+
+#step1 .step_line{
+    width: 50%;
+    height: 3px;
+    background-color: #C4D0E1;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    top: 45px;
+    
+}
+
+#step2 .step_line{
+    height: 3px;
+    width: 100%;
+    background-color: #C4D0E1;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#step3 .step_line{
+    height: 3px;
+    width: 100%;
+    background-color: #C4D0E1;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#step4 .step_line{
+    width: 50%;
+    height: 3px;
+    background-color: #C4D0E1;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    top: 45px;
+}
+
+.talent_wrap{
+        /* background-color: red; */
+        text-align: center;
+        padding-top: 100px;
+        position: relative;
+        background-image: url(./utils/bg8.webp);
+        background-repeat: no-repeat;
+        background-size: 45px 45px;
+        background-position: bottom 20px left calc(50% - 570px);
+}
+.talent_wrap h4{
+    font-size: 45px;
+    margin-bottom: 40px;
+    font-weight:600;
+}
+
+
+
+#talent_logo{
+    position: relative;
+    bottom: 79px;
+}
+
+.blur_background{
+    /* background: green;  */
+    width: 389px;
+    height: 389px;
+    position: relative;
+    bottom: 749px;
+    left: 736px;
+    background-image: url(./utils/bg7.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* end the section of about the app */
+    
